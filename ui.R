@@ -1,3 +1,6 @@
+library(shiny)
+library(LearnDC)
+
 shinyUI(pageWithSidebar(
   headerPanel('LearnDC Downloader'),
   sidebarPanel(
