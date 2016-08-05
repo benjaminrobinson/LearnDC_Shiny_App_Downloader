@@ -1,7 +1,3 @@
-options(stringsAsFactors=FALSE)
-library(shiny)
-library(LearnDC)
-
 shinyServer(function(input, output, session) {
   datasetInput <- reactive({
     switch(input$level,
