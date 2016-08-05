@@ -2,14 +2,11 @@ cd C:/Users/Benjamin/Desktop/Projects/learndc_shiny_downloader
 
 heroku apps:create learndc-shiny
 
-heroku config:set BUILDPACK_URL=https://github.com/btubbs/heroku-buildpack-shiny.git
+heroku config:set BUILDPACK_URL=https://github.com/btubbs/heroku-buildpack-shiny
 
 git push heroku
 
 
-
-cd C:/Users/Benjamin/Desktop/Projects/learndc_shiny_downloader
-
 heroku create --stack cedar-14 --buildpack http://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14
 
-heroku git:remote -a immense-retreat-86027
+git push heroku master
