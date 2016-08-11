@@ -1,5 +1,6 @@
 library(shiny)
 library(LearnDC)
+library(DT)
 
 shinyServer(function(input, output, session) {
   datasetInput <- reactive({
@@ -15,9 +16,7 @@ shinyServer(function(input, output, session) {
       updateSelectInput(session,"exhibit",choices=part_choices)
   })
   
-  output$table <- renderTable({
-    datasetInput()
-  })
+  output$x1 <- DT::renderDataTable(datasetInput(), server = TRUE)
   
   output$downloadData <- downloadHandler(
     filename = function() { paste0(tolower(input$level),"_",input$exhibit,'.csv') },

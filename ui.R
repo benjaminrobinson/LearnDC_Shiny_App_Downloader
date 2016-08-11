@@ -1,7 +1,8 @@
 library(shiny)
 library(LearnDC)
 
-shinyUI(pageWithSidebar(
+shinyUI(fluidPage(
+  pageWithSidebar(
   headerPanel('LearnDC Downloader'),
   sidebarPanel(
     selectInput("level", "Choose a level:", 
@@ -13,4 +14,7 @@ shinyUI(pageWithSidebar(
   mainPanel(
     img(src='logo.png', align = "lower left")
   )
-))
+),
+ h1(fluidRow(
+    column(12, div(DT::dataTableOutput('x1',width='150%',height='150%'),style = "font-size: 45%; width: 25%")))
+	)))
