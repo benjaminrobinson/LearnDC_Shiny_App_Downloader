@@ -1,0 +1,9 @@
+name: learndc_shiny_downloader
+account: benjaminrobinson
+server: shinyapps.io
+appId: 123604
+bundleId: 556963
+url: https://benjaminrobinson.shinyapps.io/learndc_shiny_downloader/
+when: 1473820799.38785
+asMultiple: FALSE
+asStatic: FALSE

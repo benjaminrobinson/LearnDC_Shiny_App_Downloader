@@ -4,8 +4,10 @@ heroku apps:create learndc-shiny
 
 heroku config:set BUILDPACK_URL=https://github.com/btubbs/heroku-buildpack-shiny
 
-git push heroku
+git push heroku master
 
+
+heroku config:set BUILDPACK_URL=https://github.com/jasonm/heroku-buildpack-shiny-r.git
 
 heroku create --stack cedar-14 --buildpack http://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14
 
